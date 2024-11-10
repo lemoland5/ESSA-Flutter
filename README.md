@@ -7,6 +7,13 @@ A new Flutter project.
 NIE POBIERAMY CALEGO REPO
 INTERESUJE NAS FOLDER TEST I LIB
 
+# dodawanie paczek
+
+## wsparcie do svg:
+
+Odpalasz terminal i wklejasz:
+- flutter pub add flutter_svg
+
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:

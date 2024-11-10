@@ -5,7 +5,7 @@ A new Flutter project.
 ## Getting Started
 
 NIE POBIERAMY CALEGO REPO
-INTERESUJE NAS FOLDER TEST I LIB
+INTERESUJĄ NAS FOLDERY TEST, LIB ORAZ ASSETS
 
 # dodawanie paczek
 

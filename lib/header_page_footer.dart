@@ -1,3 +1,9 @@
+import 'package:essa/pages/homepage/homepage.dart';
+import 'package:essa/pages/konto/konto.dart';
+import 'package:essa/pages/moj_dom/moj_dom.dart';
+import 'package:essa/pages/moje_liczniki/moje_liczniki.dart';
+import 'package:essa/pages/statystyki1/statystyki1.dart';
+import 'package:essa/pages/statystyki2/statystyki2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -10,32 +16,21 @@ class HeaderPageFooter extends StatefulWidget {
 
 class _HeaderPageFooter extends State<HeaderPageFooter> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     // tutaj trzeba zmienić to na strony które się będą wyświetlać
-    Text(
-      'Index 0: Homeaaaa',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Settings',
-      style: optionStyle,
-    ),
+    Homepage(),
+    Statystyki1(),
+    MojeLiczniki(),
+    MojDom(),
+    Statystyki2(),
+    Konto(),
   ];
 
-  void _onItemTapped(int index) {
+  bool _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
+    return true;
   }
 
   @override
@@ -43,88 +38,139 @@ class _HeaderPageFooter extends State<HeaderPageFooter> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.white,
+        backgroundColor: const Color(0xfffef7ff),
         leading: Container(
-          alignment: Alignment.center,  
+          alignment: Alignment.center,
           margin: const EdgeInsets.only(left: 20, top: 10),
           child: SizedBox(
             width: 44,
             height: 44,
-            child: SvgPicture.asset('assets/img/gear.svg'),
+            child: GestureDetector(
+              onTap: () {
+                _onItemTapped(4);
+              },
+              child: SvgPicture.asset(
+                'assets/img/gear.svg',
+                width: 44,
+                height: 44,
+                colorFilter: _selectedIndex == 4
+                    ? const ColorFilter.mode(Color(0xff14AE5C), BlendMode.srcIn)
+                    : const ColorFilter.mode(
+                        Color.fromARGB(255, 0, 0, 0), BlendMode.srcIn),
+              ),
+            ),
           ),
         ),
         title: Container(
-            margin: const EdgeInsets.only(top: 15), child: const Text('ESSA')),
+          margin: const EdgeInsets.only(top: 15),
+          child: const Text('ESSA'),
+        ),
         actions: [
           Container(
               alignment: Alignment.center,
               margin: const EdgeInsets.only(right: 20, top: 10),
               child: SizedBox(
-                width: 44,
-                height: 44,
-                child: SvgPicture.asset('assets/img/user.svg'),
-              )),
+                  width: 44,
+                  height: 44,
+                  child: GestureDetector(
+                    onTap: () {
+                      _onItemTapped(5);
+                    },
+                    child: SvgPicture.asset(
+                      'assets/img/user.svg',
+                      width: 44,
+                      height: 44,
+                      colorFilter: _selectedIndex == 5
+                          ? const ColorFilter.mode(
+                              Color(0xff14AE5C), BlendMode.srcIn)
+                          : const ColorFilter.mode(
+                              Color.fromARGB(255, 0, 0, 0), BlendMode.srcIn),
+                    ),
+                  ))),
         ],
+        bottom: const PreferredSize(
+          preferredSize: Size.fromHeight(20),
+          child: Divider(
+            thickness: 1.0,
+            color: Color.fromARGB(30, 0, 0, 0),
+          ),
+        ),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.white,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/img/droplet.svg',
-              width: 32,
-              height: 39,
-              colorFilter: _selectedIndex == 0
-                  ? const ColorFilter.mode(Color(0xff14AE5C), BlendMode.srcIn)
-                  : const ColorFilter.mode(
-                      Color.fromARGB(255, 0, 0, 0), BlendMode.srcIn),
+      bottomNavigationBar: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          GestureDetector(
+            onTap: () {
+              _onItemTapped(0);
+            },
+            child: Expanded(
+              child: SizedBox(
+                height: 85,
+                child: SvgPicture.asset(
+                  'assets/img/droplet.svg',
+                  width: 32,
+                  height: 39,
+                  colorFilter: _selectedIndex == 0
+                      ? const ColorFilter.mode(
+                          Color(0xff14AE5C), BlendMode.srcIn)
+                      : const ColorFilter.mode(
+                          Color.fromARGB(255, 0, 0, 0), BlendMode.srcIn),
+                ),
+              ),
             ),
-            label: '',
           ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/img/list.svg',
-              width: 38,
-              height: 26,
-              colorFilter: _selectedIndex == 1
-                  ? const ColorFilter.mode(Color(0xff14AE5C), BlendMode.srcIn)
-                  : const ColorFilter.mode(
-                      Color.fromARGB(255, 0, 0, 0), BlendMode.srcIn),
+          GestureDetector(
+            onTap: () {
+              _onItemTapped(1);
+            },
+            child: Expanded(
+              child: SvgPicture.asset(
+                'assets/img/list.svg',
+                width: 40,
+                height: 28,
+                colorFilter: _selectedIndex == 1
+                    ? const ColorFilter.mode(Color(0xff14AE5C), BlendMode.srcIn)
+                    : const ColorFilter.mode(
+                        Color.fromARGB(255, 0, 0, 0), BlendMode.srcIn),
+              ),
             ),
-            label: '',
           ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/img/cpu.svg',
-              width: 51,
-              height: 51,
-              colorFilter: _selectedIndex == 2
-                  ? const ColorFilter.mode(Color(0xff14AE5C), BlendMode.srcIn)
-                  : const ColorFilter.mode(
-                      Color.fromARGB(255, 0, 0, 0), BlendMode.srcIn),
+          GestureDetector(
+            onTap: () {
+              _onItemTapped(2);
+            },
+            child: Expanded(
+              child: SvgPicture.asset(
+                'assets/img/cpu.svg',
+                width: 48,
+                height: 48,
+                colorFilter: _selectedIndex == 2
+                    ? const ColorFilter.mode(Color(0xff14AE5C), BlendMode.srcIn)
+                    : const ColorFilter.mode(
+                        Color.fromARGB(255, 0, 0, 0), BlendMode.srcIn),
+              ),
             ),
-            label: '',
           ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/img/house.svg',
-              width: 48,
-              height: 50,
-              colorFilter: _selectedIndex == 3
-                  ? const ColorFilter.mode(Color(0xff14AE5C), BlendMode.srcIn)
-                  : const ColorFilter.mode(
-                      Color.fromARGB(255, 0, 0, 0), BlendMode.srcIn),
+          GestureDetector(
+            onTap: () {
+              _onItemTapped(3);
+            },
+            child: Expanded(
+              child: SvgPicture.asset(
+                'assets/img/house.svg',
+                width: 48,
+                height: 50,
+                colorFilter: _selectedIndex == 3
+                    ? const ColorFilter.mode(Color(0xff14AE5C), BlendMode.srcIn)
+                    : const ColorFilter.mode(
+                        Color.fromARGB(255, 0, 0, 0), BlendMode.srcIn),
+              ),
             ),
-            label: '',
           ),
         ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.green,
-        onTap: _onItemTapped,
       ),
     );
   }

@@ -6,14 +6,8 @@ import 'package:essa/pages/statystyki1/statystyki1.dart';
 import 'package:essa/pages/statystyki2/statystyki2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-// zmienne globalne
-String imie = "Radosław";
-String nazwisko = "Zdzisielski";
-String email = "rzdzisielski@gmail.com";
-double cenaWody = 9;
-double cenaPradu = 1.36;
-double cenaGazu = 2.63;
+// ignore: unused_import
+import 'globals.dart';  
 
 class HeaderPageFooter extends StatefulWidget {
   const HeaderPageFooter({super.key});

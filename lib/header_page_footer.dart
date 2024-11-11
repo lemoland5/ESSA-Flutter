@@ -7,7 +7,7 @@ import 'package:essa/pages/statystyki2/statystyki2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 // ignore: unused_import
-import 'globals.dart';  
+import 'globals.dart';
 
 class HeaderPageFooter extends StatefulWidget {
   const HeaderPageFooter({super.key});

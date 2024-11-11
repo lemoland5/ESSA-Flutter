@@ -12,7 +12,8 @@ class _HomepageState extends State<Homepage> {
   final String _imie = imie;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      margin: const EdgeInsets.only(top: 15),
       width: MediaQuery.of(context).size.width * 0.88,
       child: Column(
         children: [

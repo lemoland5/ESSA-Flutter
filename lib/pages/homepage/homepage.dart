@@ -141,8 +141,8 @@ class _HomepageState extends State<Homepage> {
                     alignment: WrapAlignment.spaceBetween,
                     children: [
                       Container(
-                        width: 165,
-                        height: 95,
+                        width: 150,
+                        height: 85,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           border: Border.all(
@@ -210,8 +210,8 @@ class _HomepageState extends State<Homepage> {
                         ),
                       ),
                       Container(
-                        width: 165,
-                        height: 95,
+                        width: 150,
+                        height: 85,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           border: Border.all(
@@ -250,8 +250,8 @@ class _HomepageState extends State<Homepage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                          width: 165,
-                          height: 140,
+                          width: 150,
+                          height: 120,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             border: Border.all(
@@ -278,7 +278,7 @@ class _HomepageState extends State<Homepage> {
                                   'Zmniejszyłeś ślad węglowy o:',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 17,
                                     color: Colors.white,
                                   ),
                                 ),
@@ -289,7 +289,7 @@ class _HomepageState extends State<Homepage> {
                                     const TextSpan(
                                       text: '30kg CO', // Tekst główny
                                       style: TextStyle(
-                                        fontSize: 26,
+                                        fontSize: 23,
                                         color: Colors.white,
                                       ),
                                     ),
@@ -315,8 +315,8 @@ class _HomepageState extends State<Homepage> {
                           ),
                         ),
                         Container(
-                          width: 165,
-                          height: 140,
+                          width: 150,
+                          height: 120,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             border: Border.all(
@@ -343,7 +343,7 @@ class _HomepageState extends State<Homepage> {
                                   'To tak jak posadzenie:',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 17,
                                     color: Colors.white,
                                   ),
                                 ),
@@ -356,7 +356,7 @@ class _HomepageState extends State<Homepage> {
                                     child: const Text(
                                       '3',
                                       style: TextStyle(
-                                        fontSize: 36,
+                                        fontSize: 32,
                                         color: Colors.white,
                                       ),
                                     ),

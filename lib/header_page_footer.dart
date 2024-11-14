@@ -3,7 +3,6 @@ import 'package:essa/pages/konto/konto.dart';
 import 'package:essa/pages/moj_dom/moj_dom.dart';
 import 'package:essa/pages/moje_liczniki/moje_liczniki.dart';
 import 'package:essa/pages/statystyki1/statystyki1.dart';
-import 'package:essa/pages/statystyki2/statystyki2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 // ignore: unused_import
@@ -24,7 +23,7 @@ class _HeaderPageFooter extends State<HeaderPageFooter> {
     Statystyki1(),
     MojeLiczniki(),
     MojDom(),
-    Statystyki2(),
+    Konto(),
     Konto(),
   ];
 

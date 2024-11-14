@@ -107,19 +107,16 @@ class _HeaderPageFooter extends State<HeaderPageFooter> {
             onTap: () {
               _onItemTapped(0);
             },
-            child: Expanded(
-              child: SizedBox(
-                height: 85,
-                child: SvgPicture.asset(
-                  'assets/img/droplet.svg',
-                  width: 32,
-                  height: 39,
-                  colorFilter: _selectedIndex == 0
-                      ? const ColorFilter.mode(
-                          Color(0xff14AE5C), BlendMode.srcIn)
-                      : const ColorFilter.mode(
-                          Color.fromARGB(255, 0, 0, 0), BlendMode.srcIn),
-                ),
+            child: SizedBox(
+              height: 85,
+              child: SvgPicture.asset(
+                'assets/img/droplet.svg',
+                width: 32,
+                height: 39,
+                colorFilter: _selectedIndex == 0
+                    ? const ColorFilter.mode(Color(0xff14AE5C), BlendMode.srcIn)
+                    : const ColorFilter.mode(
+                        Color.fromARGB(255, 0, 0, 0), BlendMode.srcIn),
               ),
             ),
           ),
@@ -127,48 +124,42 @@ class _HeaderPageFooter extends State<HeaderPageFooter> {
             onTap: () {
               _onItemTapped(1);
             },
-            child: Expanded(
-              child: SvgPicture.asset(
-                'assets/img/list.svg',
-                width: 40,
-                height: 28,
-                colorFilter: _selectedIndex == 1
-                    ? const ColorFilter.mode(Color(0xff14AE5C), BlendMode.srcIn)
-                    : const ColorFilter.mode(
-                        Color.fromARGB(255, 0, 0, 0), BlendMode.srcIn),
-              ),
+            child: SvgPicture.asset(
+              'assets/img/list.svg',
+              width: 40,
+              height: 28,
+              colorFilter: _selectedIndex == 1
+                  ? const ColorFilter.mode(Color(0xff14AE5C), BlendMode.srcIn)
+                  : const ColorFilter.mode(
+                      Color.fromARGB(255, 0, 0, 0), BlendMode.srcIn),
             ),
           ),
           GestureDetector(
             onTap: () {
               _onItemTapped(2);
             },
-            child: Expanded(
-              child: SvgPicture.asset(
-                'assets/img/cpu.svg',
-                width: 48,
-                height: 48,
-                colorFilter: _selectedIndex == 2
-                    ? const ColorFilter.mode(Color(0xff14AE5C), BlendMode.srcIn)
-                    : const ColorFilter.mode(
-                        Color.fromARGB(255, 0, 0, 0), BlendMode.srcIn),
-              ),
+            child: SvgPicture.asset(
+              'assets/img/cpu.svg',
+              width: 48,
+              height: 48,
+              colorFilter: _selectedIndex == 2
+                  ? const ColorFilter.mode(Color(0xff14AE5C), BlendMode.srcIn)
+                  : const ColorFilter.mode(
+                      Color.fromARGB(255, 0, 0, 0), BlendMode.srcIn),
             ),
           ),
           GestureDetector(
             onTap: () {
               _onItemTapped(3);
             },
-            child: Expanded(
-              child: SvgPicture.asset(
-                'assets/img/house.svg',
-                width: 48,
-                height: 50,
-                colorFilter: _selectedIndex == 3
-                    ? const ColorFilter.mode(Color(0xff14AE5C), BlendMode.srcIn)
-                    : const ColorFilter.mode(
-                        Color.fromARGB(255, 0, 0, 0), BlendMode.srcIn),
-              ),
+            child: SvgPicture.asset(
+              'assets/img/house.svg',
+              width: 48,
+              height: 50,
+              colorFilter: _selectedIndex == 3
+                  ? const ColorFilter.mode(Color(0xff14AE5C), BlendMode.srcIn)
+                  : const ColorFilter.mode(
+                      Color.fromARGB(255, 0, 0, 0), BlendMode.srcIn),
             ),
           ),
         ],
